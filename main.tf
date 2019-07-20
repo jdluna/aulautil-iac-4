@@ -29,6 +29,14 @@ output "web_sg_id" {
  value = "${data.consul_keys.read_web_sg_id.var.web_sg_id}"
 }
 
+output "web_ip" {
+ value = "${data.consul_keys.read_web_ip.var.web_ip}"
+}
+
+output "web_elb_id" {
+ value = "${data.consul_keys.read_web_elb_id.var.web_elb_id}"
+}
+
 module "web" {
   source = "./tfmodules/ec2/"
 
